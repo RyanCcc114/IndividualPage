@@ -1,0 +1,27 @@
+.touxiang{
+    margin: 50px;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    box-shadow: 0px 0px 9px 4px #747DE8;
+    animation: glowShadow 1.5s linear infinite alternate;
+  }
+
+  .touxiang {
+    width: 100%;
+    height: 100%;
+    animation: glowImage 1.5s linear infinite alternate;
+  }
+
+  @keyframes glowShadow{
+    to {
+      box-shadow: 0px 0px 35px 15px #535FED;
+    }
+  }
+  
+  @keyframes glowImage{
+    to {
+      -webkit-filter: brightness(2);
+       filter: brightness(2);
+    }
+  }

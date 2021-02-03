@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人主页</title>
+    <link rel="stylesheet" href="reset.css">
+    <!-- <link rel="stylesheet" href="/button.css"> -->
+    <link rel="stylesheet" href="touxiang.css">
+    <style>
+        @font-face{
+            font-family:myFont1;
+            src: url('字体/站酷文艺体.ttf');
+        }
+        html {
+            height: 100%;
+        }
+
+        body {
+
+            width: 100%;
+            height: 100%;
+            background: fixed no-repeat url(图片/11.png) ;
+            background-size: cover;
+            /* filter: brightness(70%); */
+            /* background-size: 100% 100%; */
+        }
+
+        .div1 {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            height: 100px;
+            font-family:"myFont1";
+            font-size: 40px;
+
+
+        }
+
+        .div2 {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100px;
+            font-family: "myFont1";
+            font-size: 20px;
+        }
+
+        .nav {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .nav li {
+            border: 10px;
+            padding: 10px;
+        }
+
+        .nav a {
+            text-align: center;
+        }
+
+
+        .touxiang {
+
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+
+        }
+
+
+
+        .icon {
+            width: 30px;
+            height: 30px;
+        }
+
+        .icon-a {
+
+            display: block;
+            width: 50px;
+            height: 50px;
+
+        }
+    </style>
+    <script>
+        window.onload = function () {
+
+        }
+    </script>
+</head>
+
+<body>
+
+    <div class="div1">
+        <div id="welcome">欢迎来到我的个人主页</div>
+    </div>
+    <div class="div1">
+        <a href="inside.html">
+        <img src="图片/F710B634-0D50-4F3A-B68A-7D011E70FBC4_1_105_c.jpeg" alt="" class="touxiang">
+    </a>
+    </div>
+    <div class="div2">
+        <div id="welcome">我是宋思涵</div>
+        <div id="welcome">欢迎关注我的社交平台</div>
+        
+    </div>
+
+
+
+
+    <ul class="nav">
+        <li>
+            <a href="http://www.zhihu.com/people/hhhhhhhan-zhuhttp://www.zhihu.com/people/hhhhhhhan-zhu" target="_blank"
+                class="icon-a"><img src="图片/icon_zhihu1.svg" alt="" class="icon"></a>
+        </li>
+        <li>
+            <a href="https://github.com/RyanCcc1221" target="_blank" class="icon-a"><img
+                    src="图片/Logo GitHub.svg" alt="" class="icon"></a>
+        </li>
+        <li>
+            <a href="https://weibo.com/u/5690732731" target="_blank" class="icon-a"><img src="图片/微博.svg"
+                    alt="" class="icon"></a>
+        </li>
+    </ul>
+
+    
+
+</body>
+
+</html>

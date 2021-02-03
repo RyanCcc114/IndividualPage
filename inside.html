@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css">
+    <style>
+        body {
+            overflow: -Scroll;
+            overflow-x: hidden;
+        }
+
+        .sidebar {
+            top: 0;
+            left: 0;
+            bottom: 0;
+            color: #fff;
+            width: 250px;
+            position: fixed;
+            overflow: hidden;
+            overflow-y: auto;
+            background: #4b4b4b
+        }
+
+        .avatar img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            text-align: center;
+            position: relative;
+            left: 15%;
+            top: 5%;
+            border: solid 2px white;
+        }
+
+        .avatar {
+            top: 0;
+            left: 0;
+            bottom: 0;
+            color: #fff;
+            width: 250px;
+            position: fixed;
+            overflow: hidden;
+            overflow-y: auto;
+            background: #4b4b4b
+        }
+
+        .nav {
+            position: fixed;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            font-size: 22px;
+            /* left: 50%; */
+            top: 35%;
+
+        }
+
+        .nav li {
+            /* padding-left: 100px;
+            padding-bottom: 60px; */
+            /* height: 30px; */
+            width: 250px;
+            /* font-size: 50px; */
+            text-align: center;
+            padding: 10px 0 10px 0;
+            /* margin: 10px 0 20px 0; */
+        }
+
+        .nav li a {
+            display: block;
+            text-decoration: none;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            color: #fff;
+            transition: 0.5s background-color;
+
+            /* width: 250px; */
+        }
+
+        .nav a:hover {
+            
+            background-color: #3a3939;
+            /* width: 100%; */
+        }
+
+        .nav a:visited {
+            color: #fff;
+        }
+
+        #info {
+            background: url(图片/bg-1.png);
+
+            /* box-sizing: border-box; */
+            margin-left: 250px;
+            height: 400px;
+            /* background-repeat: no-repeat; */
+            background-attachment: fixed;
+            /* background-position: center center; */
+            /* background-size: cover; */
+            /* display: block; */
+            /* text-align: center; */
+        }
+
+        .icon-1 img {
+            height: 27px;
+            position: relative;
+            top: 81px;
+            left: 50px;
+        }
+
+        .title {
+            position: relative;
+            top: 50px;
+            left: 100px;
+            font-weight: 500;
+            font-size: 30px;
+        }
+
+        .row {
+            display: grid;
+            width: auto;
+            grid-template-columns: 33.33% 33.33% 33.33%;
+            position: relative;
+            top: 85px;
+
+        }
+
+        .row p {
+            width: 300px;
+            display: block;
+            margin: 30px 50px;
+            font-weight: 400;
+            font-size: 19px;
+
+            /* font-size: 25px; */
+        }
+
+        .col-1-6 {
+            letter-spacing: 2px;
+            line-height: 30px;
+        }
+
+        #talent {
+            margin-left: 250px;
+            height: 400px;
+            background-color: #f8bd24;
+        }
+
+        .icon-2 img {
+            height: 35px;
+            position: relative;
+            top: 83px;
+            left: 50px;
+        }
+
+        .skill {
+            display: grid;
+            grid-template-columns: 25% 25% 25% 25%;
+            padding: 0px 20px;
+            position: relative;
+            top: 90px;
+            left: 80px;
+        }
+
+        .skill img {
+            display: block;
+            height: 100px;
+            transition: all 0.6s;
+        }
+
+        .skill img:hover {
+            transform: scale(1.2);
+        }
+
+        .skill p {
+            width: 200px;
+            line-height: 25px;
+            letter-spacing: 2px;
+            position: relative;
+            left: -35px;
+            top: 10px;
+        }
+
+        #journey {
+            margin-left: 250px;
+            height: 400px;
+            background: url(图片/bg-2.png);
+            background-attachment: fixed;
+        }
+
+        .icon-3 img {
+            height: 35px;
+            position: relative;
+            top: 83px;
+            left: 50px;
+        }
+
+        .axis img {
+            /* width: 20px; */
+            overflow: hidden;
+            float: left;
+        }
+
+        .experience {
+            position: relative;
+            top: 90px;
+            left: 80px;
+        }
+
+        .experience ul {
+            height: 240px;
+        }
+
+        .experience li {
+            height: 30px;
+            border-left: 2px #f8bd24 solid;
+            /* border: 5px 0px; */
+            padding: 5px 0px;
+            padding-left: 20px;
+            line-height: 30px;
+            /* position: relative; */
+            /* text-align: center; */
+            transition: all 0.6s;
+
+        }
+
+        .experience li:hover {
+            /* position: relative;
+            left: 100px; */
+            transform: translate(30px);
+            /* transform: scale(1.2); */
+        }
+
+
+
+        /* .experience li :nth-child(4){
+            height: 20px;
+        } */
+
+        #works{
+            margin-left: 250px;
+            height: 400px;
+            background-color: #fff;
+        }
+        
+        .icon-4 img{
+            height: 35px;
+            position: relative;
+            top: 83px;
+            left: 50px;
+        }
+        
+        .exhibits ul{
+            width: auto;
+            display: flex;
+            justify-content: center;
+            position: relative;
+            left: 130px;
+            
+            
+        }
+        .exhibits li{
+            padding: 80px 50px;
+            
+        }
+        .exhibits img{
+            display: block;
+            width: 300px;
+            
+            transition: all 0.6s;
+
+        }
+
+        .exhibits img:hover{
+            transform: scale(1.2);
+        }
+
+        .exhibits p{
+            width: 200px;
+            line-height: 25px;
+            letter-spacing: 2px;
+            position: relative;
+            left: 117px;
+            top: 20px;
+        }
+        .copyright {
+            margin-left: 250px;
+            height: 50px;
+            text-align: center;
+        }
+
+        .copyright p {
+            height: 50px;
+            line-height: 50px;
+            background-color: rgb(245, 127, 127);
+        }
+    </style>
+</head>
+
+<body>
+    <aside class="sidebar">
+        <div class="avatar">
+            <img src="图片/F710B634-0D50-4F3A-B68A-7D011E70FBC4_1_105_c.jpeg" alt="">
+        </div>
+        <ul class="nav">
+            <li><a href="index.html">首页</a></li>
+            <li><a href="#info">资料</a></li>
+            <li><a href="#talent">技能</a></li>
+            <li><a href="#journey">经历</a></li>
+            <li><a href="#works">作品</a></li>
+        </ul>
+    </aside>
+    <main>
+        <section id="info">
+            <div class="wrap">
+                <div class="icon-1">
+                    <img src="图片/icon/xingxing.svg" alt="">
+                </div>
+                <h2 class="title">个人资料</h2>
+                <div class="row">
+                    <div class="col-1-4">
+                        <p>姓名：宋思涵</p>
+                        <p>年龄：20</p>
+                        <p>英文名：Sahal</p>
+                        <p>学历：本科</p>
+                    </div>
+
+                    <div class="col-1-5">
+                        <p>QQ：2298350138</p>
+                        <p>微信：Kecia-Hal</p>
+                        <p>邮箱:2298350138@qq.com</p>
+                        <p>手机号:17764091850</p>
+                    </div>
+
+                    <div class="col-1-6">
+                        <p>
+                            我是一名地理信息专业的学生，来自长江大学。目前是一名大三学生，在学习地理信息系统相关知识。在学校学习的知识以外还对前端非常的感兴趣。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="talent">
+            <div class="">
+                <div class="icon-2">
+                    <img src="图片/icon/boshimao.svg" alt="">
+                </div>
+                <div class="title">技能</div>
+                <div class="skill">
+                    <div class="css">
+                        <img src="图片/icon/css.svg" alt="">
+                        <p>
+                            对css较为熟悉，痴迷于对动画和特效的实现
+                        </p>
+                    </div>
+                    <div class="html">
+                        <img src="图片/icon/html.svg" alt="">
+                        <p>
+                            对网页结构的构思较为清晰，能正确直观地表达出重点
+                        </p>
+                    </div>
+                    <div class="js">
+                        <img src="图片/icon/js.svg" alt="">
+                        <p>
+                            喜欢用JS写出一些简易的小功能，面向CSDN的编程😂
+                        </p>
+                    </div>
+                    <div class="c#">
+                        <img src="图片/icon/NET.svg" alt="">
+                        <p>
+                            上学期学过一些c#开发，对于面向对象的语言有了一个基本的认识
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="journey">
+            <div>
+                <div class="icon-3">
+                    <img src="图片/icon/jiaoyin.svg" alt="">
+                </div>
+                <h2 class="title">历程</h2>
+                <div class="experience">
+                    
+                    <ul>
+                        <li>2018.9 进入长江大学</li>
+                        <li>2018.10 加入学生会</li>
+                        <li>2019.6 报名参加军运会志愿者并培训</li>
+                        <li>2019.10 担任军运会志愿者</li>
+                        <li>2020.10 参加大创项目组并完成申报</li>
+                        <li>继续学习...</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="works">
+            <div>
+                <div class="icon-4">
+                    <img src="图片/icon/zuopin.svg" alt="">
+                </div>
+                <div class="title">作品</div>
+                <div class="exhibits">
+                    <ul>
+                        <li><img src="图片/WX20201007-150359@2x.png" alt=""><p>个人主页</p></li>
+                        <li><img src="图片/WX20201007-152351@2x.png" alt=""><p>仿苹果官网</p></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <footer class="copyright">
+            <p>©宋思涵 2020</p>
+        </footer>
+    </main>
+</body>
+
+</html>

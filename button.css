@@ -1,0 +1,80 @@
+.button a {
+    position: relative;
+    /* 距上部 */
+    top: 50%;
+    left: 50%;
+    /* transform: translate(-50%, -50%); */
+    transform: translate(-25%,-25%);
+    /*移动，根据x,y轴*/
+    /* width: 400px; */
+    /* height: 120px; */
+    text-align: center;
+    /* font-size: 20px; */
+    /* line-height: 10px; */
+    color: #fff;
+    /* 字体大写 */
+    text-transform: uppercase;
+    text-decoration: none;
+    /* 非衬线字体 */
+    font-family: sans-serif;
+    box-sizing: border-box;
+    /* 渐变背景 */
+    background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+    /* 边框圆角 */
+    border-radius: 60px;
+    /* 背景大小 */
+    background-size: 400%;
+    z-index: 1;
+}
+
+.button a:hover {
+    /* 动画：名称 时间 线性 循环 播放完回退播放 */
+    animation: animate 8s linear infinite alternate;
+}
+
+@keyframes animate {
+    0% {
+        background-position: 0%;
+        /*修改背景定位，实现渐变色炫光*/
+    }
+
+    50% {
+        background-position: 100%;
+    }
+
+    100% {
+        background-position: 0%;
+    }
+}
+
+.button a::before {
+    /*之前添加*/
+    content: '';
+    /*内容*/
+    position: relative;
+    /* top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px; */
+    top: 50%;
+    left: 50%;
+    transform: translate(-25%,-25%);
+    z-index: -1;
+    background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+    border-radius: 40px;
+    background-size: 400%;
+    filter: blur(20px);
+    /*过渡：模糊*/
+    opacity: 0;
+    /*透明度*/
+    transition: 1s;
+    /*过渡时间*/
+
+}
+
+.button a:hover::before {
+    filter: blur(20px);
+    opacity: 1;
+    animation: animate 8s linear infinite;
+}
+
